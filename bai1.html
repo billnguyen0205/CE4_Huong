@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+
+var input =["BINH","HUNG","PHUOC","CAO","KHANH"];
+var longline = [];
+
+function longestString (arr){
+    var ilength =0;
+    for (var i=0;i<input.length;i++){
+    if (ilength<input[i].length){
+        ilength = input[i].length;
+    }
+ }
+    for(var s =0; s<input.length; s++){
+        if (input[s].length ==ilength){
+            longline.push(input[s]);
+        }
+    } 
+    if(longline.length ==1){
+        return longline[0];
+    } else{
+        return longline;
+    }
+}
+
+console.log(longestString(input));
+
+ </script>   
+</body>
+</html>
